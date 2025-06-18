@@ -25,18 +25,20 @@ In this workshop, you will:
 
 ---
 
-# Before you start, make sure you have appropiate roles and permisions to perform this lab
+# Before you start, Make sure you're authenticated 🔑  with your GCP project:
 
-# Make sure you're authenticated with your GCP project:
-# 🔑 Authentication
 
 ```bash
 gcloud auth application-default login
 ```
 
+# Also, make sure you have appropiate roles and permisions to perform this lab
+
+
+
 This will store credentials used by `google.auth.default()` in the code.
 
-To assign the `roles/owner` and a custom Model Armor role (replace `roles/modelArmor` with your actual custom role ID) to a user, use the following commands:
+To assign the `roles/owner` and a custom Model Armor role (replace `roles/modelArmor.admin` with your actual custom role ID) to a user, use the following commands:
 
 ```sh
 # Grant Owner role
@@ -53,7 +55,7 @@ gcloud projects add-iam-policy-binding YOUR_PROJECT_ID \
 Replace the following:
 - `YOUR_PROJECT_ID`: your Google Cloud project ID
 - `USER_EMAIL`: the email address of the user
-- `roles/modelArmor`: the ID of your custom Model Armor role (if different)
+- `roles/modelArmor.admin`: the ID of your custom Model Armor role (if different)
 
 For more information, see the [gcloud documentation](https://cloud.google.com/sdk/gcloud/reference/projects/add-iam-policy-binding).
 
