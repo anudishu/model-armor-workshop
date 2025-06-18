@@ -106,13 +106,13 @@ gcloud services enable aiplatform.googleapis.com
 ## 5. 🛡️ Create Model Armor Template
 
 
-# . Go to Model Armor Page
+# Go to Model Armor Page
 - Open the [Model Armor Console](https://console.cloud.google.com/model-armor).
 - Make sure you're in the correct Google Cloud **project**.
 
-# . Click on “Create Template”
+# Click on “Create Template”
 
-# . Fill in Template Details
+#  Fill in Template Details
 - **Template ID**:
   - Must include only letters, digits, or hyphens.
   - Max length: 63 characters.
@@ -122,7 +122,7 @@ gcloud services enable aiplatform.googleapis.com
 - **Labels** (Optional):
   - Add key-value labels to group related templates.
 
-# . Configure Detection Settings
+# Configure Detection Settings
 
 ### ✅ Malicious URL Detection
 - Detects phishing, malware, or harmful URLs.
@@ -139,7 +139,7 @@ gcloud services enable aiplatform.googleapis.com
 
 
 
-## . Set Responsible AI Filters
+# Set Responsible AI Filters
 
 - Confidence level represents how likely it is that the findings will match a content filter type.
 - For stricter enforcement, set it to `Low and above`.
@@ -151,7 +151,7 @@ gcloud services enable aiplatform.googleapis.com
 | Sexually Explicit    | Low and above      |
 | Harassment           | Low and above      |
 
-## . Click **Create**
+# Click **Create**
 - The template is now ready to use with your LLM safety evaluations.
 
 
