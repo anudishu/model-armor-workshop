@@ -48,6 +48,11 @@ gcloud projects add-iam-policy-binding YOUR_PROJECT_ID \
 gcloud projects add-iam-policy-binding YOUR_PROJECT_ID \
   --member="user:USER_EMAIL" \
   --role="roles/modelarmor.admin"
+
+# Grant Vertex AI Admin role
+gcloud projects add-iam-policy-binding PROJECT_ID \
+    --member="user:USER_EMAIL" \
+    --role="roles/aiplatform.admin"  
 ```
 
 Replace the following:
