@@ -170,53 +170,33 @@ gcloud services enable \
 
 ---
 
-# 🛡️ Step 5: Create a Model Armor Template
+<div style="border:1px solid #ccc; border-radius:8px; padding:16px; background:#f9f9f9">
 
-## 🔗 Open the Model Armor Console
+## 🛡️ Step 5: Create a Model Armor Template
 
+### 🔗 Open the Model Armor Console
 - Go to the [Model Armor Console](https://console.cloud.google.com/model-armor).
-- Make sure you're in the correct **Google Cloud project**.
+- Ensure you're in the correct **Google Cloud project**.
 
-## ➕ Create a New Template
-
+### ➕ Create a New Template
 - Click on **“Create Template”**.
 
-## 📝 Fill in Template Details
-
-- **Template ID**:
-  - Must include only letters, digits, or hyphens.
-  - Max length: 63 characters.
-  - Cannot start with a hyphen or include spaces.
-- **Region**:
-  - Select a region (this cannot be changed later).
-- **Labels** (optional):
-  - Add key-value labels to group related templates (e.g., `env=prod`).
+### 📝 Fill in Template Details
+- **Template ID**: Only letters, digits, hyphens; max 63 characters.
+- **Region**: Required; cannot be changed later.
+- **Labels**: (Optional) Use key-value format (e.g., `env=prod`).
 
 ---
 
-## ⚙️ Configure Detection Settings
+### ⚙️ Configure Detection Settings
 
-### ✅ Malicious URL Detection
-- Detects phishing, malware, or harmful URLs.
-
-### ✅ Prompt Injection & Jailbreak Detection
-- Detects prompt attacks and jailbreak attempts.
-- **Recommended:** Set confidence level to `LOW_AND_ABOVE` for stricter detection.
-
-### ✅ Sensitive Data Protection (SDP)
-
-#### a. Basic SDP
-- Uses predefined infoTypes like:
-  - Email addresses
-  - Credit card numbers
-  - Phone numbers
+✅ **Malicious URL Detection**  
+✅ **Prompt Injection & Jailbreak Detection** — Set to `LOW_AND_ABOVE`  
+✅ **Sensitive Data Protection (SDP)** — Basic infoTypes enabled
 
 ---
 
-## 🧠 Set Responsible AI Filters
-
-> Confidence level represents how likely it is that the findings will match a content filter type.  
-> For stricter enforcement, set it to `Low and above`.
+### 🧠 Responsible AI Filters
 
 | Content Filter       | Confidence Level   |
 |----------------------|--------------------|
@@ -227,11 +207,10 @@ gcloud services enable \
 
 ---
 
-## ✅ Click **Create**
+### ✅ Click Create
+- Your template is now ready for use.
 
-- The template is now ready to use with your LLM safety evaluations.
-
-
+</div>
 
 
 ---
