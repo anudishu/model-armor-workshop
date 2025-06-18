@@ -170,46 +170,53 @@ gcloud services enable \
 
 ---
 
-## 5. 🛡️ Create Model Armor Template
+# 🛡️ Step 5: Create a Model Armor Template
 
+## 🔗 Open the Model Armor Console
 
-## Go to Model Armor Page
-- Open the [Model Armor Console](https://console.cloud.google.com/model-armor).
-- Make sure you're in the correct Google Cloud **project**.
+- Go to the [Model Armor Console](https://console.cloud.google.com/model-armor).
+- Make sure you're in the correct **Google Cloud project**.
 
-## Click on “Create Template”
+## ➕ Create a New Template
 
-##  Fill in Template Details
+- Click on **“Create Template”**.
+
+## 📝 Fill in Template Details
+
 - **Template ID**:
   - Must include only letters, digits, or hyphens.
   - Max length: 63 characters.
   - Cannot start with a hyphen or include spaces.
 - **Region**:
-  - Select a region (cannot be changed later).
-- **Labels** (Optional):
-  - Add key-value labels to group related templates.
+  - Select a region (this cannot be changed later).
+- **Labels** (optional):
+  - Add key-value labels to group related templates (e.g., `env=prod`).
 
-## Configure Detection Settings
+---
+
+## ⚙️ Configure Detection Settings
 
 ### ✅ Malicious URL Detection
 - Detects phishing, malware, or harmful URLs.
 
 ### ✅ Prompt Injection & Jailbreak Detection
 - Detects prompt attacks and jailbreak attempts.
-- **Recommended**: Set confidence level to `LOW_AND_ABOVE` for stricter detection.
+- **Recommended:** Set confidence level to `LOW_AND_ABOVE` for stricter detection.
 
 ### ✅ Sensitive Data Protection (SDP)
 
-
 #### a. Basic SDP
-- Uses predefined infoTypes (e.g., email, credit card).
+- Uses predefined infoTypes like:
+  - Email addresses
+  - Credit card numbers
+  - Phone numbers
 
+---
 
+## 🧠 Set Responsible AI Filters
 
-## Set Responsible AI Filters
-
-- Confidence level represents how likely it is that the findings will match a content filter type.
-- For stricter enforcement, set it to `Low and above`.
+> Confidence level represents how likely it is that the findings will match a content filter type.  
+> For stricter enforcement, set it to `Low and above`.
 
 | Content Filter       | Confidence Level   |
 |----------------------|--------------------|
@@ -218,8 +225,12 @@ gcloud services enable \
 | Sexually Explicit    | Low and above      |
 | Harassment           | Low and above      |
 
-## Click **Create**
+---
+
+## ✅ Click **Create**
+
 - The template is now ready to use with your LLM safety evaluations.
+
 
 
 
