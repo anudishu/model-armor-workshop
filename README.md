@@ -52,7 +52,7 @@ By the end of the workshop, you will:
 Join us for a friendly, interactive session and take the first step towards building safer, smarter machine learning models!
 
 
-
+   
 
 # 🔐 Model Armor + Gemini Chat Demo - Lets get started:
 
