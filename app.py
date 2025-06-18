@@ -7,9 +7,10 @@ from vertexai.generative_models import GenerativeModel
 
 
 # === Config ===
-PROJECT_ID = "projecta-418002"
+PROJECT_ID = "modelarmor-463317"
 REGION = "us-central1"
-TEMPLATE_ID = "demo-armor-template"
+TEMPLATE_ID = "demo-armor-template-1"
+MODEL_NAME = "gemini-2.0-flash-001"  # Configure your model here
 
 # === Get Access Token ===
 @st.cache_resource
@@ -104,7 +105,8 @@ def pretty_print_armor_result(result):
 # === Call Gemini Model ===
 def call_vertex_ai_gemini(prompt_text):
     st.markdown("### 🧠 Sending safe prompt to Gemini...")
-    model = GenerativeModel("gemini-1.5-flash")  # instantiate with model name directly
+   
+    model = GenerativeModel(MODEL_NAME)  # Use configurable model name
     response = model.generate_content(prompt_text)
     return response.text
 

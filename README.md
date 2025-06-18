@@ -164,7 +164,10 @@ gcloud services enable \
   aiplatform.googleapis.com \
   compute.googleapis.com \
   storage.googleapis.com \
-  servicenetworking.googleapis.com
+  servicenetworking.googleapis.com \
+  artifactregistry.googleapis.com \
+  cloudbuild.googleapis.com \
+  run.googleapis.com
 
 ```
 
@@ -261,7 +264,7 @@ Open the local URL shown in the terminal (usually `http://localhost:8501`).
 ## Lets deploy it on CloudRun Service
 
 ```bash
-gcloud run deploy ai-app-service \               
+gcloud run deploy ai-app-service \
   --source . \
   --region us-central1 \
   --platform managed \
