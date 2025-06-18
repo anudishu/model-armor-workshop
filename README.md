@@ -21,8 +21,42 @@ In this workshop, you will:
 - Google Cloud account with billing enabled
 - Project with Vertex AI API & Model Armor API enabled
 - Python 3.8–3.11 installed
+- Granting owner role and model armor admin role
 
 ---
+
+# Before you start, make sure you have appropiate roles and permisions to perform this lab
+
+# Make sure you're authenticated with your GCP project:
+# 🔑 Authentication
+
+```bash
+gcloud auth application-default login
+```
+
+This will store credentials used by `google.auth.default()` in the code.
+
+To assign the `roles/owner` and a custom Model Armor role (replace `roles/modelArmor` with your actual custom role ID) to a user, use the following commands:
+
+```sh
+# Grant Owner role
+gcloud projects add-iam-policy-binding YOUR_PROJECT_ID \
+  --member="user:USER_EMAIL" \
+  --role="roles/owner"
+
+# Grant Model Armor role (replace with your actual custom role ID)
+gcloud projects add-iam-policy-binding YOUR_PROJECT_ID \
+  --member="user:USER_EMAIL" \
+  --role="roles/modelarmor.admin"
+```
+
+Replace the following:
+- `YOUR_PROJECT_ID`: your Google Cloud project ID
+- `USER_EMAIL`: the email address of the user
+- `roles/modelArmor`: the ID of your custom Model Armor role (if different)
+
+For more information, see the [gcloud documentation](https://cloud.google.com/sdk/gcloud/reference/projects/add-iam-policy-binding).
+
 
 ## 🚀 Quick Start
 
@@ -35,7 +69,7 @@ cd model-armor-workshop
 
 ---
 
-### 2. 🐍 Set Up Virtual Environment
+### 2.  Set Up Virtual Environment
 
 #### For macOS/Linux:
 ```bash
@@ -46,7 +80,7 @@ source venv/bin/activate
 #### For Windows (PowerShell):
 ```powershell
 python -m venv venv
-.env\Scriptsctivate
+.env\Scripts\activate
 ```
 
 ---
@@ -57,22 +91,6 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-If you don’t have a `requirements.txt`, install manually:
-```bash
-pip install streamlit google-auth google-auth-oauthlib google-auth-httplib2 google-cloud-aiplatform requests
-```
-
----
-
-## 🔑 Authentication
-
-Make sure you're authenticated with your GCP project:
-
-```bash
-gcloud auth application-default login
-```
-
-This will store credentials used by `google.auth.default()` in the code.
 
 ---
 
@@ -88,16 +106,13 @@ gcloud services enable aiplatform.googleapis.com
 ## 🛡️ Create Model Armor Template
 
 
-
-# 🛡️ Steps to Create a Model Armor Template in Google Cloud Console
-
-## 1. Go to Model Armor Page
+# 1. Go to Model Armor Page
 - Open the [Model Armor Console](https://console.cloud.google.com/model-armor).
 - Make sure you're in the correct Google Cloud **project**.
 
-## 2. Click on “Create Template”
+# 2. Click on “Create Template”
 
-## 3. Fill in Template Details
+# 3. Fill in Template Details
 - **Template ID**:
   - Must include only letters, digits, or hyphens.
   - Max length: 63 characters.
@@ -107,7 +122,7 @@ gcloud services enable aiplatform.googleapis.com
 - **Labels** (Optional):
   - Add key-value labels to group related templates.
 
-## 4. Configure Detection Settings
+# 4. Configure Detection Settings
 
 ### ✅ Malicious URL Detection
 - Detects phishing, malware, or harmful URLs.
@@ -117,7 +132,7 @@ gcloud services enable aiplatform.googleapis.com
 - **Recommended**: Set confidence level to `LOW_AND_ABOVE` for stricter detection.
 
 ### ✅ Sensitive Data Protection (SDP)
-Choose one of the following:
+
 
 #### a. Basic SDP
 - Uses predefined infoTypes (e.g., email, credit card).
