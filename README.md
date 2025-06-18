@@ -1,5 +1,60 @@
 
-# 🔐 Model Armor + Gemini Chat Demo (Streamlit App)
+Welcome to the **Model Armor Workshop**! This hands-on session is perfect for anyone who works with machine learning models or is curious about making their models safer and easier to understand. No matter if you’re a beginner or have some experience, you’ll find valuable knowledge and practical skills in this workshop.
+
+## What is Model Armor?
+
+**Model Armor** is a tool built with Streamlit that helps you analyze, protect, and understand your machine learning models. Think of it as a “shield” for your models—helping you spot weaknesses, make your models stronger, and explain how they work.
+
+## What Will You Learn?
+
+During this workshop, you will:
+
+- **Get introduced to Model Armor:**  
+  Learn what it is, why it matters, and how it can help you in your ML projects.
+
+- **Explore the Streamlit app:**  
+  See how Streamlit makes it easy to interact with your models through a simple web interface.
+
+- **Hands-on walkthrough:**  
+  Try out Model Armor on real models. You’ll see how to upload a model, run checks, and read the results.
+
+- **Understand Model Security:**  
+  Discover common problems and risks in machine learning models, and learn how Model Armor can help address them.
+
+- **Interpretability and Robustness:**  
+  Find out how to explain your model’s decisions and check how well it handles tricky situations.
+
+- **Live demonstrations:**  
+  Watch step-by-step examples and try things out yourself. There will be lots of chances to ask questions!
+
+## Who Should Attend?
+
+- Students and newcomers to machine learning
+- Data scientists and ML engineers who want better tools for model safety
+- Anyone interested in AI, model explainability, or secure ML
+
+## What Do You Need?
+
+- Basic understanding of Python is helpful.
+- A laptop to follow along (if you want to try the app yourself)
+- Google  Cloud Credits
+- Curiosity and questions!
+
+## What Will You Take Away?
+
+By the end of the workshop, you will:
+
+- Know how to use the Model Armor Streamlit app
+- Understand why model security and interpretability are important
+- Be able to check your own models for common issues
+- Have practical experience you can use in your own ML projects
+
+Join us for a friendly, interactive session and take the first step towards building safer, smarter machine learning models!
+
+
+
+
+# 🔐 Model Armor + Gemini Chat Demo - Lets get started:
 
 This is a demo app showcasing how to **protect AI agentic applications** using **Google Cloud Model Armor**. The app lets you test prompts, sanitize them using Model Armor, and — if safe — pass them to **Gemini 1.5 Flash** for response generation.
 
