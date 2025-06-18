@@ -1,5 +1,5 @@
 
-![Model Armor Architecture](image/screenshot1.png)
+![Model Armor Architecture](image/Architecture.png)
 
 Welcome to the **Model Armor Workshop**! This hands-on session is perfect for anyone who works with machine learning models or is curious about making their models safer and easier to understand. No matter if you’re a beginner or have some experience, you’ll find valuable knowledge and practical skills in this workshop.
 
