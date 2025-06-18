@@ -1,4 +1,6 @@
 
+![Model Armor Architecture](image/screenshot1.png)
+
 Welcome to the **Model Armor Workshop**! This hands-on session is perfect for anyone who works with machine learning models or is curious about making their models safer and easier to understand. No matter if you’re a beginner or have some experience, you’ll find valuable knowledge and practical skills in this workshop.
 
 ## What is Model Armor?
@@ -29,7 +31,7 @@ During this workshop, you will:
 
 ## Who Should Attend?
 
-- Students and newcomers to machine learning
+- Students, Professionals and newcomers to Security, AI and machine learning
 - Data scientists and ML engineers who want better tools for model safety
 - Anyone interested in AI, model explainability, or secure ML
 
@@ -157,8 +159,13 @@ pip install -r requirements.txt
 ## 4. 🧱 Enable Required APIs
 
 ```bash
-gcloud services enable modelarmor.googleapis.com
-gcloud services enable aiplatform.googleapis.com
+gcloud services enable \
+  modelarmor.googleapis.com \
+  aiplatform.googleapis.com \
+  compute.googleapis.com \
+  storage.googleapis.com \
+  servicenetworking.googleapis.com
+
 ```
 
 ---
@@ -261,20 +268,15 @@ Open the local URL shown in the terminal (usually `http://localhost:8501`).
 
 ---
 
-## 📌 Notes
+## Lets deploy it on CloudRun Service
 
-- Make sure your IAM role includes:
-  - Vertex AI User
-  - Model Armor Admin or User
-- If running on Cloud Run or GCE, use a service account with these permissions.
-- Gemini API requires access via **Vertex AI Studio or SDK**.
-
----
-
-## 💬 Feedback & Contributions
-
-Feel free to raise issues or PRs if you'd like to improve this repo.
-
+```bash
+gcloud run deploy ai-app-service \               
+  --source . \
+  --region us-central1 \
+  --platform managed \
+  --allow-unauthenticated
+```
 ---
 
 ## 🧠 Credits
