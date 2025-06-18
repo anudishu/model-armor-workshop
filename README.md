@@ -87,17 +87,59 @@ gcloud services enable aiplatform.googleapis.com
 
 ## 🛡️ Create Model Armor Template
 
-Replace `PROJECT_ID` and `REGION` with your actual values.
 
-```bash
-gcloud beta modelarmor templates create demo-armor-template \
-  --project=PROJECT_ID \
-  --location=REGION \
-  --display-name="Demo Template" \
-  --template-config='{"raiConfig":{"enabled":true},"piAndJailbreakConfig":{"enabled":true},"sdpConfig":{"enabled":true}}'
-```
 
-You can update the config to enable/disable specific filters.
+# 🛡️ Steps to Create a Model Armor Template in Google Cloud Console
+
+## 1. Go to Model Armor Page
+- Open the [Model Armor Console](https://console.cloud.google.com/model-armor).
+- Make sure you're in the correct Google Cloud **project**.
+
+## 2. Click on “Create Template”
+
+## 3. Fill in Template Details
+- **Template ID**:
+  - Must include only letters, digits, or hyphens.
+  - Max length: 63 characters.
+  - Cannot start with a hyphen or include spaces.
+- **Region**:
+  - Select a region (cannot be changed later).
+- **Labels** (Optional):
+  - Add key-value labels to group related templates.
+
+## 4. Configure Detection Settings
+
+### ✅ Malicious URL Detection
+- Detects phishing, malware, or harmful URLs.
+
+### ✅ Prompt Injection & Jailbreak Detection
+- Detects prompt attacks and jailbreak attempts.
+- **Recommended**: Set confidence level to `LOW_AND_ABOVE` for stricter detection.
+
+### ✅ Sensitive Data Protection (SDP)
+Choose one of the following:
+
+#### a. Basic SDP
+- Uses predefined infoTypes (e.g., email, credit card).
+
+
+
+## 5. Set Responsible AI Filters
+
+- Confidence level represents how likely it is that the findings will match a content filter type.
+- For stricter enforcement, set it to `Low and above`.
+
+| Content Filter       | Confidence Level   |
+|----------------------|--------------------|
+| Hate Speech          | Low and above      |
+| Dangerous            | Low and above      |
+| Sexually Explicit    | Low and above      |
+| Harassment           | Low and above      |
+
+## 6. Click **Create**
+- The template is now ready to use with your LLM safety evaluations.
+
+
 
 ---
 
