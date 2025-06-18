@@ -25,18 +25,16 @@ In this workshop, you will:
 
 ---
 
-# Before you start, Make sure you're authenticated 🔑  with your GCP project:
+## Before you start, Make sure you're authenticated 🔑  with your GCP project:
 
 
 ```bash
 gcloud auth application-default login
 ```
-
-# Also, make sure you have appropiate roles and permisions to perform this lab
-
-
-
 This will store credentials used by `google.auth.default()` in the code.
+
+## Also, make sure you have appropiate roles and permisions to perform this lab
+
 
 To assign the `roles/owner` and a custom Model Armor role (replace `roles/modelArmor.admin` with your actual custom role ID) to a user, use the following commands:
 
