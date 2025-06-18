@@ -257,7 +257,7 @@ Open the local URL shown in the terminal (usually `http://localhost:8501`).
 
 ## Here is an example screenshot to guide you:
 
-![Screenshot of the app](screenshot1.png)
+![Screenshot of the app](image/screenshot1.png)
 
 ---
 
